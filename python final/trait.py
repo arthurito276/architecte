@@ -7,9 +7,9 @@ def trait(x1,y1,x2,y2):
         x2, y2 : coordonnées de la fin du trait
     Cette function dessine un trait entre les 2 points transmis en paramètres
     '''
-    turtle.up()
+    turtle.penup()
     turtle.goto(x1,y1)
-    turtle.down()
+    turtle.pendown()
     turtle.goto(x2,y2)
 
 if __name__ == '__main__':
