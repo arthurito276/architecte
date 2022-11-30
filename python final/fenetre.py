@@ -12,7 +12,7 @@ def fenetre(x,y):
     '''
     turtle.pendown()
     turtle.pencolor("blue")
-    rectangle(0,0,30,30)
+    rectangle(x,y,30,30)
 
 if __name__ == '__main__':
     fenetre(0,0)
