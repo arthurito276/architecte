@@ -1,6 +1,5 @@
 import turtle
 from rectangle import rectangle
-from sol import sol
 
 def porte(x,y,couleur):
     '''
@@ -19,7 +18,6 @@ def porte(x,y,couleur):
 
 
 if __name__ == '__main__':
-    sol(0)
     porte(0,0,"red")
     # On ferme la fenêtre s'il y a un clique gauche
     turtle.exitonclick()
