@@ -13,6 +13,7 @@ def sol(y_sol):
 
     turtle.pensize(10)
     trait(-250,y_sol,250,y_sol)
+    turtle.pensize(1)
 
 
 if __name__ == '__main__':
