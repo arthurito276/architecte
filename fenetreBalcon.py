@@ -2,7 +2,7 @@ import turtle
 from rectangle import rectangle
 from trait import trait
 
-def fenetreBalcon(x,y):
+def fenetre_balcon(x,y):
     '''
     Paramètres :
         x est l'abcisse du centre de la porte-fenetre-balcon
@@ -13,13 +13,23 @@ def fenetreBalcon(x,y):
     '''
     # porte-fenetre
 
-    pass
+    turtle.pendown()
+    turtle.pencolor("blue")
+    rectangle(0,0,30,30)
+
 
 
     # balcon
 
 
-    pass
+    turtle.pendown()
+    turtle.pencolor("black")
+    rectangle(0,0,50,-30)
+    rectangle(0,0,40,-30)
+    rectangle(0,0,30,-30)
+    rectangle(0,0,20,-30)
+    rectangle(0,0,10,-30)
+    rectangle(0,0,0,-30)
 
 
 
