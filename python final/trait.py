@@ -13,6 +13,7 @@ def trait(x1,y1,x2,y2):
     turtle.goto(x1,y1)
     turtle.pendown()
     turtle.goto(x2,y2)
+    turtle.penup()
 
 if __name__ == '__main__':
     # dessine deux traits
