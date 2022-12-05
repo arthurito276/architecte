@@ -20,7 +20,7 @@ def rdc(x, ySol, c_facade, c_porte):
     facade(x, ySol, c_facade,0)
 
     # Construit les 3 éléments (1 porte et 2 fenetres)
-    x_elements = [x,x+35,x-35]
+    x_elements = [x,x+42.5,x-42.5]
     shuffle(x_elements)
     fenetre(x_elements[0],ySol+20)
     fenetre(x_elements[1],ySol+20)
