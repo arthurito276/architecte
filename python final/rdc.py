@@ -17,15 +17,15 @@ def rdc(x, ySol, c_facade, c_porte):
         Puis les 3 élements : 1 porte et 2 fenêtres disposées au hasard
     '''
     # Dessine la facade
-    facade(x,ySol,c_facade,0)
+    facade(x, ySol, c_facade,0)
 
     # Construit les 3 éléments (1 porte et 2 fenetres)
-    x_element = [x,x-140/3,x+140/3]
-    shuffle(x_element)
-    porte(x_element[0],ySol,c_porte)
-    fenetre(x_element[1],ySol + 20)
-    fenetre(x_element[2],ySol + 20)
-
+    x_elements = [x,x+35,x-35]
+    shuffle(x_elements)
+    fenetre(x_elements[0],ySol+20)
+    fenetre(x_elements[1],ySol+20)
+    porte(x_elements[2],ySol,c_porte)
+    
 if __name__ == '__main__':
     rdc(0,0,"red","green")
     # On ferme la fenêtre s'il y a un clique gauche
