@@ -12,9 +12,9 @@ def rectangle(x,y,w,h):
     sur le côté en bas au milieu
     '''
     trait(x-w/2, y, x+w/2, y)
-    trait(x-w/2, y, x-w/2, y+h)
-    trait(x-w/2, y+h, x+w/2, y+h)
-    trait(x+w/2, y+h, x+w/2, y)
+    trait(x+w/2, y, x+w/2, y+h)
+    trait(x+w/2, y+h, x-w/2, y+h)
+    trait(x-w/2, y+h, x-w/2, y)
 
 
 if __name__ == '__main__':

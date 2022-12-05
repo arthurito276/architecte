@@ -12,25 +12,16 @@ def fenetre_balcon(x,y):
         puis le balcon
     '''
     # porte-fenetre
-
-    turtle.pendown()
-    turtle.pencolor("blue")
-    rectangle(0,0,30,30)
-
-
-
+    turtle.fillcolor("light blue")
+    turtle.pencolor("light blue")
+    turtle.begin_fill()
+    rectangle(x,y,30,50)
+    turtle.end_fill()
     # balcon
-
-
-    turtle.pendown()
     turtle.pencolor("black")
-    rectangle(0,0,50,-30)
-    rectangle(0,0,40,-30)
-    rectangle(0,0,30,-30)
-    rectangle(0,0,20,-30)
-    rectangle(0,0,10,-30)
-    rectangle(0,0,0,-30)
-
+    rectangle(x,y,40,30)
+    for barreau in range(-3,4):
+        trait(x+5*barreau,y,x+5*barreau,y+30)
 
 
 if __name__ == '__main__':

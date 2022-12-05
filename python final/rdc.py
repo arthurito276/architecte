@@ -25,6 +25,7 @@ def rdc(x, ySol, c_facade, c_porte):
     fenetre(x_elements[0],ySol+20)
     fenetre(x_elements[1],ySol+20)
     porte(x_elements[2],ySol,c_porte)
+    
 if __name__ == '__main__':
     rdc(0,0,"red","green")
     # On ferme la fenêtre s'il y a un clique gauche
