@@ -12,6 +12,7 @@ def toit2(x, ySol, niveau):
     turtle.pensize(10)
     yToit = ySol + niveau * 60
     trait(x-70,yToit,x+70,yToit)
+    turtle.pensize(1)
 
 if __name__ == '__main__':
     toit2(67,12,2)

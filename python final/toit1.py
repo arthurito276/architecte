@@ -10,6 +10,7 @@ def toit1(x, ySol, niveau):
     Cette fonction dessine un toit triangulaire noir de base 160 pixels
     et de hauteur centrale 40 pixels
     '''
+    turtle.fillcolor("black")
     turtle.begin_fill()
     yToit = ySol + niveau * 60
     trait(x-80,yToit,x+80,yToit)
