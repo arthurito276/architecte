@@ -12,15 +12,13 @@ def fenetre_balcon(x,y):
         puis le balcon
     '''
     # porte-fenetre
-    turtle.fillcolor("light blue")#La je change la couleur du pinceau pourla mettre en bleu
     turtle.pencolor("light blue")
-    turtle.begin_fill()#ici c'est  pour remplir le contenue de la fenetre pour pas que ça reste blanc
-    rectangle(x,y,30,50)#je defini la taille de la fenetre
-    turtle.end_fill()
+    rectangle(x,y,30,50,"light blue")#je defini la taille de la fenetre
+    
     # balcon
     turtle.pencolor("black")#je remet la couleur par defaut
-    rectangle(x,y,40,30)#je donne la taille du balcon
-    for barreau in range(-3,4):
+    rectangle(x,y,50,30)#je donne la taille du balcon
+    for barreau in range(-4,5):
         trait(x+5*barreau,y,x+5*barreau,y+30)#j'utilise une fonction repetitive pour diminuer le nombre de ligne
 
 
