@@ -12,6 +12,7 @@ def facade(x, ySol, couleur, niveau):
         Facade dessine une facade sans les élements interieurs
     '''
     rectangle(x,ySol+niveau*60,140,60,couleur)
+
 if __name__ == '__main__':
     facade(0,0,"red",0)
     # On ferme la fenêtre s'il y a un clique gauche

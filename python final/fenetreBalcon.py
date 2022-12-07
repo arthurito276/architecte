@@ -14,7 +14,7 @@ def fenetre_balcon(x,y):
     # porte-fenetre
     turtle.pencolor("light blue")
     rectangle(x,y,30,50,"light blue")#je defini la taille de la fenetre
-    
+
     # balcon
     turtle.pencolor("black")#je remet la couleur par defaut
     rectangle(x,y,50,30)#je donne la taille du balcon
