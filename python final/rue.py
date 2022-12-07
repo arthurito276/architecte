@@ -2,6 +2,9 @@ import turtle
 from random import randint, shuffle
 from sol import sol
 from immeuble import immeuble
+from buisson import buisson
+from cloture import cloture
+from lampadaire import lampadaire
 # ------------------------------
 # ------------------------------
 # ------------------------------
@@ -14,10 +17,16 @@ def main():
     # Dessin du sol de la rue
     sol(y_sol)
     # Dessin des 4 immeubles
-    immeuble(-282,y_sol)
-    immeuble(-94,y_sol)
-    immeuble(94,y_sol)
-    immeuble(282,y_sol)
+    for x_immeuble in range(-282,283,188):
+        immeuble(x_immeuble,y_sol)
+    #
+    for x_element in range(-376,377,188):
+        choix_element = randint(0,1)
+        if choix_element==0:
+            cloture(x_element,y_sol,48)
+        else:
+            buisson(x_element,y_sol,48)
+        lampadaire(x_element,y_sol)
 
     # On ferme la fenêtre s'il y a un clique gauche
     turtle.exitonclick()
