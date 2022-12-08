@@ -22,9 +22,9 @@ def etage(x, ySol, couleur, niveau,tridi = None):
     for i in range(3):
         f_ou_fb = randint(0, 1)
         if f_ou_fb == 0:
-            fenetre_balcon(x_elements[i],ySol+niveau*60)
+            fenetre_balcon(x_elements[i],ySol+niveau*60,tridi)
         else:
-            fenetre(x_elements[i],ySol+20+niveau*60)
+            fenetre(x_elements[i],ySol+20+niveau*60,tridi)
 
 
 if __name__ == '__main__':

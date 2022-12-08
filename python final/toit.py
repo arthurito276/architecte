@@ -3,7 +3,7 @@ from toit1 import toit1
 from toit2 import toit2
 import turtle
 
-def toit(x, ySol, niveau):
+def toit(x, ySol, niveau,tridi = None):
     '''
     Paramètres
         x : abscisse du centre de l'étage
@@ -14,9 +14,9 @@ def toit(x, ySol, niveau):
     '''
     toit = randint(1,2)
     if toit == 1:
-        toit1(x,ySol,niveau)
+        toit1(x,ySol,niveau,tridi)
     else:
-        toit2(x,ySol,niveau)
+        toit2(x,ySol,niveau,tridi)
 
 
 if __name__ == '__main__':

@@ -33,7 +33,7 @@ def immeuble(x, ySol,tridi = None):
         etage(x,ySol,couleur_facade,niveau,tridi)
 
     # Dessin du toit
-    toit(x,ySol,nb_etage+1)
+    toit(x,ySol,nb_etage+1,tridi)
     
 
 if __name__ == '__main__':

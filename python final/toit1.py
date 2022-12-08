@@ -1,7 +1,8 @@
 import turtle
 from trait import trait
+from parallelogramme import parallelogramme
 
-def toit1(x, ySol, niveau):
+def toit1(x, ySol, niveau,tridi = None):
     '''
     Paramètres :
         x : abcisse du centre du toit
@@ -16,11 +17,13 @@ def toit1(x, ySol, niveau):
     trait(x-80,yToit,x+80,yToit)
     trait(x+80,yToit,x,yToit+40)
     trait(x,yToit+40,x-80,yToit)
+    '''if tridi != None:
+        parallelogramme(x+40,yToit+20,90,60,tridi,False,"black")'''
     turtle.end_fill()
 
 
 
 if __name__ == '__main__':
-    toit1(32,34,4)
+    toit1(32,34,4,30)
     # On ferme la fenêtre s'il y a un clic gauche
     turtle.exitonclick()

@@ -18,20 +18,22 @@ def main(tridi = None):
     sol(y_sol,tridi)
     # Dessin des 4 immeubles
     if tridi==None or tridi<90:
-        for x_immeuble in range(-282,283,188):
-            immeuble(x_immeuble,y_sol,tridi)
-    
-    
-    #
-    '''for x_element in range(-376,377,188):
+        step = 1
+    else:
+        step = -1
+    x_immeubles = [i for i in range(-282,283,188*step)]
+    x_elements = [i for i in range(-376,377,188*step)]
+
+    for x_immeuble,x_element in zip(x_immeubles,x_elements):
         choix_element = randint(0,1)
         if choix_element==0:
-            cloture(x_element,y_sol,48)
+            cloture(x_element,y_sol,48,tridi)
         else:
-            buisson(x_element,y_sol,48)
-        lampadaire(x_element,y_sol)
-        '''
-
+            buisson(x_element,y_sol,48,tridi)
+        lampadaire(x_element,y_sol,tridi)
+        immeuble(x_immeuble,y_sol,tridi)
+        
+    
     # On ferme la fenêtre s'il y a un clique gauche
     turtle.exitonclick()
 
