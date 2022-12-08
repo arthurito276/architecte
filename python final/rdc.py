@@ -4,7 +4,7 @@ from porte import porte
 from fenetre import fenetre
 import turtle
 
-def rdc(x, ySol, c_facade, c_porte):
+def rdc(x, ySol, c_facade, c_porte,tridi):
     '''
     Paramètres
         x : (int) abscisse du centre
@@ -17,7 +17,7 @@ def rdc(x, ySol, c_facade, c_porte):
         Puis les 3 élements : 1 porte et 2 fenêtres disposées au hasard
     '''
     # Dessine la facade
-    facade(x, ySol, c_facade,0)
+    facade(x, ySol, c_facade,0,tridi)
 
     # Construit les 3 éléments (1 porte et 2 fenetres)
     x_elements = [x,x+42.5,x-42.5]

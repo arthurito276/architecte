@@ -4,7 +4,7 @@ from fenetre import fenetre
 from fenetreBalcon import fenetre_balcon
 import turtle
 
-def etage(x, ySol, couleur, niveau):
+def etage(x, ySol, couleur, niveau,tridi = None):
     '''
     Paramètres
         x : abscisse du centre de l'étage
@@ -15,7 +15,7 @@ def etage(x, ySol, couleur, niveau):
        Cette fonction dessine un étage d'un immeuble
     '''
     # dessin des murs
-    facade(x,ySol,couleur,niveau)
+    facade(x,ySol,couleur,niveau,tridi)
     # dessin des 3 Eléments
     x_elements = [x,x+42.5,x-42.5]
     shuffle(x_elements)
