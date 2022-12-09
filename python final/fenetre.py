@@ -11,10 +11,7 @@ def fenetre(x,y,tridi = None):
         dessine une fenetre de 30 pixels sur 30 pixels
 
     '''
-    if tridi != None:
-        pave(x,y,30,30,2,tridi,"light blue")
-    else:
-        rectangle(x,y,30,30,"light blue")
+    pave(x,y,30,30,2,tridi,"light blue")
 
 if __name__ == '__main__':
     fenetre(0,0,30)

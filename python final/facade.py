@@ -12,10 +12,7 @@ def facade(x, ySol, couleur, niveau,tridi=None):
     remarque :
         Facade dessine une facade sans les élements interieurs
     '''
-    if tridi != None:
-        pave(x,ySol+niveau*60,140,60,60,tridi,couleur)
-    else:  
-        rectangle(x,ySol+niveau*60,140,60,couleur)
+    pave(x,ySol+niveau*60,140,60,60,tridi,couleur)
 
 if __name__ == '__main__':
     facade(0,0,"red",0,30)

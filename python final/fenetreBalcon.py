@@ -13,16 +13,10 @@ def fenetre_balcon(x,y,tridi=None):
         puis le balcon
     '''
     # porte-fenetre
-    if tridi != None:
-        pave(x,y,30,50,2,tridi,"light blue")
-    else:
-        rectangle(x,y,30,50,"light blue")#je defini la taille de la fenetre
+    pave(x,y,30,50,2,tridi,"light blue")
 
     # balcon
-    if tridi != None:
-        pave(x,y,40,30,2,tridi,None)
-    else:
-        rectangle(x,y,40,30)#je donne la taille du balcon
+    pave(x,y,40,30,2,tridi,None)
     for barreau in range(-3,4):
         trait(x+5*barreau,y,x+5*barreau,y+30)#j'utilise une fonction repetitive pour diminuer le nombre de ligne
 
