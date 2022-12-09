@@ -11,7 +11,7 @@ def parallelogramme(x,y,w,h,angle_d,angle_p,c_remplissage = None):
     
     x_decal = (h*math.cos(math.radians(angle_d)))
     y_decal = (h*math.sin(math.radians(angle_d)))
-        
+
     point_a = [x+x_pente/2,y-y_pente/2]
     point_b = [point_a[0]+x_decal,point_a[1]+y_decal]
     point_c = [point_b[0]-x_pente,point_b[1]+y_pente]

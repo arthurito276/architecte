@@ -17,13 +17,13 @@ def main(tridi = None):
     # Dessin du sol de la rue
     sol(y_sol,tridi)
     # Dessin des 4 immeubles
-    if tridi==None or tridi<=90:
+    if tridi==None or tridi<90:
         step = 1
     else:
         step = -1
     x_immeubles = [i for i in range(-282*step,283*step,188*step)]
     x_elements = [i for i in range(-376*step,377*step,188*step)]
-    x_immeubles.append(None)
+    x_immeubles.append(None) #type:ignore
     for x_immeuble,x_element in zip(x_immeubles,x_elements):
         choix_element = randint(0,1)
         if choix_element==0:
@@ -39,7 +39,7 @@ def main(tridi = None):
     turtle.exitonclick()
 
 if __name__ == '__main__':
-    main(90)
+    main()
 
 
 
