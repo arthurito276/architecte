@@ -11,7 +11,7 @@ def sol(y_sol,tridi = None):
         y_sol : ordonnée du sol du la rue
     Cete fonction dessine un trait horizontale de 3 pixels d'épaisseur
     '''
-    if tridi != None:
+    if tridi >= 90:
         pave(0,y_sol,840,10,100,tridi,"black")
     else:
         turtle.pensize(10)
