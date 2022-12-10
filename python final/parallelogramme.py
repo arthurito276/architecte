@@ -2,7 +2,18 @@ import turtle
 import math
 from trait import trait
 
-def parallelogramme(x,y,w,h,angle_d,angle_p,c_remplissage = None):
+def parallelogramme(x:float,y:float,w:float,h:float,angle_d:float,angle_p:float,c_remplissage = None)-> None:
+    """Dessine un parallélogramme
+
+    Args:
+        x (float): Absisse du centre de la base du parallélograme
+        y (float): Ordonnée du centre du parallélogramme
+        w (float): Largeur de la base du parallélogramme
+        h (float): Hauteur du parallélogramme
+        angle_d (float): Angle du parallélogramme
+        angle_p (float): Angle de rotation du parallélogramme
+        c_remplissage (_type_, optional): Couleur du remplissage du parallélogramme. None par défaut.
+    """
     if c_remplissage != None:
         turtle.fillcolor(c_remplissage)
         turtle.begin_fill()

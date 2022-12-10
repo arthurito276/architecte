@@ -2,7 +2,18 @@ from rectangle import rectangle
 import turtle
 from parallelogramme import parallelogramme
 
-def pave(x,y,w,h,d,angle,c_remplissage):
+def pave(x:float,y:float,w:float,h:float,d:float,angle:float,c_remplissage=None)-> None:
+    """Dessine un pavé
+
+    Args:
+        x (float): Abscisse du centre de la base du pavé
+        y (float): Ordonnée du centre de la base du pavé
+        w (float): Largeur de la base du pavé
+        h (float): Hauteur du pavé
+        d (float): Profondeur du pavé
+        angle (float): Angle de fuite du pavé
+        c_remplissage (optional): Couleur de remplissage du pavé. None par défaut.
+    """
     rectangle(x,y,w,h,c_remplissage)
     if angle != None:
         if angle < 180:
