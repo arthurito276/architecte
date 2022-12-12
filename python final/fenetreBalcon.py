@@ -12,12 +12,12 @@ def fenetre_balcon(x,y):
         puis le balcon
     '''
     # porte-fenetre
-    rectangle(x,y,30,50,"light blue")
+    rectangle(x,y,30,50,"light blue") #trace un rectangle de dimension 30/50 de couleur bleue claire
 
     # balcon
-    rectangle(x,y,50,30)#je donne la taille du balcon
+    rectangle(x,y,50,30)# trace un rectangle vide
     for barreau in range(-4,5):
-        trait(x+5*barreau,y,x+5*barreau,y+30)#j'utilise une fonction repetitive pour diminuer le nombre de ligne
+        trait(x+5*barreau,y,x+5*barreau,y+30)# boucle pour tracer les barreaux
 
 
 if __name__ == '__main__':
