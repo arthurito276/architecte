@@ -13,7 +13,6 @@ def sol(y_sol,tridi = None):
     '''
     pave(0,y_sol-5,840,10,100,tridi,"black")
 
-
 if __name__ == '__main__':
     sol(0,30)
     # On ferme la fenêtre s'il y a un clique gauche

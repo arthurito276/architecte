@@ -7,7 +7,8 @@ from etage import etage
 from toit import toit
 import turtle
 
-def immeuble(x, ySol,tridi = None):
+
+def immeuble(x, ySol,tridi = None,heure_force = None):
     '''
     Paramètres
         x : abscisse du centre de l'étage
@@ -26,17 +27,16 @@ def immeuble(x, ySol,tridi = None):
 
     # Dessin du RDC
 
-    rdc(x,ySol,couleur_facade,couleur_elements,tridi)
-
+    rdc(x,ySol,couleur_facade,couleur_elements,tridi,heure_force)
     # Dessin des étages
     for niveau in range(1,nb_etage+1):
-        etage(x,ySol,couleur_facade,niveau,tridi)
+        etage(x,ySol,couleur_facade,niveau,tridi,heure_force)
 
     # Dessin du toit
     toit(x,ySol,nb_etage+1,tridi)
     
 
 if __name__ == '__main__':
-    immeuble(0,0,30)
+    immeuble(0,0,7)
     # On ferme la fenêtre s'il y a un clique gauche
     turtle.exitonclick()
