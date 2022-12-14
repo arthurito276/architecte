@@ -2,8 +2,9 @@ from rectangle import rectangle
 import turtle
 import datetime as dt
 from random import randint
+from pave import pave
 
-def fenetre(x,y,heure_force = None):
+def fenetre(x,y,tridi = None,heure_force = None):
     '''
     Paramètres :
         x est l'abcisse du centre de la fenêtre
@@ -16,16 +17,16 @@ def fenetre(x,y,heure_force = None):
     if heure_force != None:
         heure = heure_force
     if heure > 8 and heure < 20:
-        rectangle(x,y,30,30,"light blue")
+        pave(x,y,30,30,2,tridi,"light blue")
     else:
         on = randint(0,1)
         if on == 1:
-            rectangle(x, y, 30, 30, "gold")
+            rectangle(x, y, 30, 30, 2, tridi, "gold")
         else:
-            rectangle(x, y, 30, 30, "dark blue")
+            rectangle(x, y, 30, 30, 2, tridi, "dark blue")
 
 if __name__ == '__main__':
-    fenetre(0,0)
+    fenetre(0,0,30)
     # On ferme la fenêtre s'il y a un clique gauche
     turtle.exitonclick()
 
