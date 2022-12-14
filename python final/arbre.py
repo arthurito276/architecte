@@ -1,10 +1,10 @@
 import turtle
-from rectangle import rectangle
+from pave import pave
 
-def arbre(x,y,h,w):
-    rectangle(x,y,7.5,h,"brown")
-    rectangle(x,y+h-5,w,w,"forest green")
+def arbre(x,y,tridi=None):
+    pave(x,y,7.5,50,3,tridi,"brown")
+    pave(x,y+45,30,30,10,tridi,"forest green")
 
 if __name__ == "__main__":
-    arbre(34,34,30,25)
+    arbre(34,34,30)
     turtle.exitonclick()

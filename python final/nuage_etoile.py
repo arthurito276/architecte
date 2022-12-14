@@ -1,14 +1,15 @@
 import turtle
-from rectangle import rectangle
 from random import randrange,randint
+from pave import pave
+from rectangle import rectangle
 
-def ciel_nuage(h_nuage):
+def ciel_nuage(h_nuage,tridi=None):
     turtle.pencolor("light grey")
     nb_nuages= randint(0,20)
     for nuage in range(nb_nuages):
         y_nuage = randrange(h_nuage[0],h_nuage[1])
         x_nuage = randrange(-400,400)
-        rectangle(x_nuage,y_nuage,45,30,"light grey")
+        pave(x_nuage,y_nuage,45,30,10,tridi,"light grey")
     turtle.pencolor("black")
 
 def ciel_etoile():

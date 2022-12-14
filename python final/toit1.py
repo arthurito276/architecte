@@ -20,11 +20,15 @@ def toit1(x, ySol, niveau,tridi = None):
     trait(x,yToit+40,x-80,yToit)
     turtle.end_fill()
     angle_toit = math.degrees(math.atan(0.5))
-    parallelogramme(x+40,yToit+20,89,60,tridi,angle_toit,"red")
-    parallelogramme(x-40,yToit+20,89,60,tridi,-angle_toit,"red")
+    if tridi < 90:
+        parallelogramme(x+40,yToit+20,89,60,tridi,angle_toit,"red")
+        parallelogramme(x-40,yToit+20,89,60,tridi,-angle_toit,"red")
+    else:
+        parallelogramme(x-40,yToit+20,89,60,tridi,-angle_toit,"red")
+        parallelogramme(x+40,yToit+20,89,60,tridi,angle_toit,"red")
 
 
 if __name__ == '__main__':
-    toit1(32,34,4,140)
+    toit1(32,34,4,45)
     # On ferme la fenêtre s'il y a un clic gauche
     turtle.exitonclick()

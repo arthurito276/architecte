@@ -1,5 +1,4 @@
 import turtle
-from rectangle import rectangle
 from pave import pave
 
 def facade(x, ySol, couleur, niveau,tridi=None):

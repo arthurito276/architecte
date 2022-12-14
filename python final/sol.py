@@ -11,7 +11,7 @@ def sol(y_sol,tridi = None):
         y_sol : ordonnée du sol du la rue
     Cete fonction dessine un trait horizontale de 3 pixels d'épaisseur
     '''
-    pave(0,y_sol-5,840,10,100,tridi,"black")
+    pave(0,y_sol-5,840,3,100,tridi,"black")
 
 if __name__ == '__main__':
     sol(0,30)

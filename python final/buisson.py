@@ -1,5 +1,4 @@
 import turtle
-from rectangle import rectangle
 from pave import pave
 
 def buisson(x:float,y:float,w:float,tridi:float=None)-> None:

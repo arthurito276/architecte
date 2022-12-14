@@ -17,10 +17,10 @@ def lampadaire(x:float,y:float,tridi:float = None,heure_force = None)->None:
     if heure_force != None:
         heure = heure_force
     if heure < 8 or heure > 20 :
-        pave(x,y_sol+80,15,15,15,tridi,"gold")
+        pave(x,y+80,15,15,10,tridi,"gold")
     else:
-        pave(x,y_sol+80,15,15,15,tridi,"light blue")
+        pave(x,y+80,15,15,10,tridi,"light blue")
 
 if __name__ == "__main__":
-    lampadaire(45,0,30)
+    lampadaire(45,0,30,4)
     turtle.exitonclick()

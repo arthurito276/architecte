@@ -13,13 +13,12 @@ from ciel import ciel
 
 def main(tridi = None,heure_force = None):
     turtle.setup(800, 600)
-    turtle.speed(2)
     # On définit la hauteur du sol
     y_sol = -200
+    #ciel
+    ciel(heure_force,tridi)
     # Dessin du sol de la rue
     sol(y_sol,tridi)
-    #ciel
-    ciel(heure_force)
     # Dessin des 4 immeubles
     if tridi==None or tridi<90:
         step = 1
@@ -30,7 +29,7 @@ def main(tridi = None,heure_force = None):
     x_immeubles.append(None) #type:ignore
     for x_immeuble,x_element in zip(x_immeubles,x_elements):
         choix_element = randint(0,1)
-        arbre(x_element,y_sol,60,45)
+        arbre(x_element,y_sol,tridi)
         if choix_element==0:
             cloture(x_element,y_sol,48,tridi)
         else:
@@ -44,7 +43,7 @@ def main(tridi = None,heure_force = None):
     turtle.exitonclick()
 
 if __name__ == '__main__':
-    main(6)
+    main(15,12)
 
 
 

@@ -4,7 +4,7 @@ from astre import astre
 from nuage_etoile import ciel_nuage,ciel_etoile
 
 
-def ciel(heure_force = None):
+def ciel(heure_force = None,tridi = None):
     heure = dt.datetime.now().hour
     if heure_force != None:
         heure = heure_force
@@ -14,8 +14,8 @@ def ciel(heure_force = None):
         ciel_etoile()
     else:
         turtle.bgcolor("sky blue")
-        ciel_nuage([150,280])
-    astre(heure)
+        ciel_nuage([150,280],tridi)
+    astre(heure,tridi)
 
 
 
