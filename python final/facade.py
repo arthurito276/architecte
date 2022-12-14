@@ -11,7 +11,10 @@ def facade(x, ySol, couleur, niveau):
     remarque :
         Facade dessine une facade sans les élements interieurs
     '''
-    rectangle(x,ySol+niveau*60,140,60,couleur)
+    turtle.fillcolor(couleur)
+    turtle.begin_fill()
+    rectangle(x,ySol+niveau*60,140,60)
+    turtle.end_fill()
 
 if __name__ == '__main__':
     facade(0,0,"red",0)

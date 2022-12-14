@@ -10,7 +10,10 @@ def fenetre(x,y):
         dessine une fenetre de 30 pixels sur 30 pixels
 
     '''
-    rectangle(x,y,30,30,"light blue")
+    turtle.fillcolor("light blue")
+    turtle.begin_fill()
+    rectangle(x,y,30,30)
+    turtle.end_fill()
 
 if __name__ == '__main__':
     fenetre(0,0)

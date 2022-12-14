@@ -17,23 +17,23 @@ def immeuble(x, ySol):
     '''
     # Nombre d'étage (aléatoire)
 
-    nb_etage = randint(1,4)
+    nb_etage = randint(1,4) # Détermine de façon aléatoire le nombre d'étages et le stocke dans une variable
 
     #Couleurs des éléments (aléatoire)
-    turtle.colormode(255)
-    couleur_facade = couleurAleatoire()
-    couleur_elements= couleurAleatoire()
+    turtle.colormode(255) # Défini le mode de couleur de turtle sur 255
+    couleur_facade = couleurAleatoire() # Défini la couleur de la facade aléatoirement
+    couleur_elements= couleurAleatoire() # Défini la couleur des éléments aléatoirement
 
     # Dessin du RDC
 
-    rdc(x,ySol,couleur_facade,couleur_elements)
+    rdc(x,ySol,couleur_facade,couleur_elements) # Dessine le rdc aux coordonnées x,ySol avec les couleurs définies plus haut
 
     # Dessin des étages
-    for niveau in range(1,nb_etage+1):
-        etage(x,ySol,couleur_facade,niveau)
+    for niveau in range(1,nb_etage+1): # boucle qui s'exécutera en fonction du nombre d'étages
+        etage(x,ySol,couleur_facade,niveau) # Dessine un étage aux coordonnées x,ySol avec la couleur de la facade plus haut et le niveau
 
     # Dessin du toit
-    toit(x,ySol,nb_etage+1)
+    toit(x,ySol,nb_etage+1) # Dessine un toit qui sera choisi aléatoirement
     
 
 if __name__ == '__main__':
