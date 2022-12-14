@@ -5,6 +5,7 @@ from immeuble import immeuble
 from buisson import buisson
 from cloture import cloture
 from lampadaire import lampadaire
+from arbre import arbre
 # ------------------------------
 # ------------------------------
 # ------------------------------
@@ -22,11 +23,12 @@ def main():
     #
     for x_element in range(-376,377,188):
         choix_element = randint(0,1)
+        arbre(x_element,y_sol,60,50)
         if choix_element==0:
             cloture(x_element,y_sol,48)
         else:
             buisson(x_element,y_sol,48)
-        lampadaire(x_element,y_sol)
+        lampadaire(x_element+10,y_sol)
 
     # On ferme la fenêtre s'il y a un clique gauche
     turtle.exitonclick()
