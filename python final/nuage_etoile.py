@@ -11,6 +11,15 @@ def ciel_nuage(h_nuage):
         rectangle(x_nuage,y_nuage,45,30,"light grey")
     turtle.pencolor("black")
 
+def ciel_etoile():
+    turtle.pencolor("white")
+    for i in range(100):
+        rectangle(randint(-400,400),randint(-200,300),1,1,"white")
+    turtle.pencolor("black")
+
+
 if __name__ == "__main__":
-    ciel_nuage([150,300])
+    turtle.bgcolor("black")
+    ciel_etoile()
+    ciel_nuage([150,280])
     turtle.exitonclick()
