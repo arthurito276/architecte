@@ -15,5 +15,6 @@ def astre(heure_force = None):
         rectangle(x_astre,y_astre,40,40,"grey")
 
 if __name__ == "__main__":
-    astre()
+    for heure in range(0,25):
+        astre(heure)
     turtle.exitonclick()

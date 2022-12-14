@@ -26,7 +26,7 @@ def main(heure_force = None):
     #
     for x_element in range(-376,377,188):
         choix_element = randint(0,1)
-        arbre(x_element,y_sol,60,50)
+        arbre(x_element,y_sol,60,45)
         if choix_element==0:
             cloture(x_element,y_sol,48)
         else:
