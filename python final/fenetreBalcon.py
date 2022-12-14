@@ -4,7 +4,7 @@ from trait import trait
 import datetime as dt
 from random import randint
 
-def fenetre_balcon(x,y,force_heure = None):
+def fenetre_balcon(x,y,heure_force = None):
     '''
     Paramètres :
         x est l'abcisse du centre de la porte-fenetre-balcon
@@ -15,8 +15,8 @@ def fenetre_balcon(x,y,force_heure = None):
     '''
     # porte-fenetre
     heure = dt.datetime.now().hour
-    if force_heure != None:
-        heure = force_heure
+    if heure_force != None:
+        heure = heure_force
     if heure > 8 and heure < 20:
         rectangle(x,y,30,50,"light blue") #trace un rectangle de dimension 30/50 de couleur bleue claire
     else:

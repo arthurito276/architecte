@@ -3,7 +3,7 @@ import turtle
 import datetime as dt
 from random import randint
 
-def fenetre(x,y,force_heure = None):
+def fenetre(x,y,heure_force = None):
     '''
     Paramètres :
         x est l'abcisse du centre de la fenêtre
@@ -13,8 +13,8 @@ def fenetre(x,y,force_heure = None):
 
     '''
     heure = dt.datetime.now().hour
-    if force_heure != None:
-        heure = force_heure
+    if heure_force != None:
+        heure = heure_force
     if heure > 8 and heure < 20:
         rectangle(x,y,30,30,"light blue")
     else:

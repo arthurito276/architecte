@@ -4,7 +4,7 @@ from fenetre import fenetre
 from fenetreBalcon import fenetre_balcon
 import turtle
 
-def etage(x, ySol, couleur, niveau):
+def etage(x, ySol, couleur, niveau,heure_force = None):
     '''
     Paramètres
         x : abscisse du centre de l'étage
@@ -22,9 +22,9 @@ def etage(x, ySol, couleur, niveau):
     for i in range(3):
         f_ou_fb = randint(0, 1)
         if f_ou_fb == 0:
-            fenetre_balcon(x_elements[i],ySol+niveau*60)
+            fenetre_balcon(x_elements[i],ySol+niveau*60,heure_force)
         else:
-            fenetre(x_elements[i],ySol+20+niveau*60)
+            fenetre(x_elements[i],ySol+20+niveau*60,heure_force)
 
 
 if __name__ == '__main__':

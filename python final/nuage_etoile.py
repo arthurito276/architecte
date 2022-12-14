@@ -13,7 +13,7 @@ def ciel_nuage(h_nuage):
 
 def ciel_etoile():
     turtle.pencolor("white")
-    for i in range(100):
+    for i in range(50):
         rectangle(randint(-400,400),randint(-200,300),1,1,"white")
     turtle.pencolor("black")
 
