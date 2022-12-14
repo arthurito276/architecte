@@ -1,8 +1,10 @@
 import turtle
 from rectangle import rectangle
 from trait import trait
+import datetime as dt
+from random import randint
 
-def fenetre_balcon(x,y):
+def fenetre_balcon(x,y,force_heure = None):
     '''
     Paramètres :
         x est l'abcisse du centre de la porte-fenetre-balcon
@@ -12,7 +14,17 @@ def fenetre_balcon(x,y):
         puis le balcon
     '''
     # porte-fenetre
-    rectangle(x,y,30,50,"light blue") #trace un rectangle de dimension 30/50 de couleur bleue claire
+    heure = dt.datetime.now().hour
+    if force_heure != None:
+        heure = force_heure
+    if heure > 8 and heure < 20:
+        rectangle(x,y,30,50,"light blue") #trace un rectangle de dimension 30/50 de couleur bleue claire
+    else:
+        on = randint(0, 1)
+        if on == 1:
+            rectangle(x, y, 30, 50, "gold")
+        else:
+            rectangle(x, y, 30, 50, "dark blue")
 
     # balcon
     rectangle(x,y,50,30)# trace un rectangle vide
@@ -24,3 +36,4 @@ if __name__ == '__main__':
     fenetre_balcon(0,0)
     # On ferme la fenêtre s'il y a un clique gauche
     turtle.exitonclick()
+
