@@ -14,7 +14,7 @@ def parallelogramme(x:float,y:float,w:float,h:float,angle_d:float,angle_p:float,
         angle_p (float): Angle de rotation du parallélogramme
         c_remplissage (_type_, optional): Couleur du remplissage du parallélogramme. None par défaut.
     """
-    if c_remplissage != None: # Détermine le remplissage
+    if c_remplissage != None: # Détermine si le remplissage doit être effectué
         turtle.fillcolor(c_remplissage) # Change la couleur de remplissage
         turtle.begin_fill() # Démarre le remplissage
     x_pente = w*math.cos(math.radians(angle_p)) # Calcul le décalage d'abscisse dû à la pente de la base

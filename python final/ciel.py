@@ -15,16 +15,17 @@ def ciel(heure_force:int = None,tridi:float = None):
     if heure_force != None: # Vérifie si l'heure doit être forcée
         heure = heure_force # Force l'heure
     turtle.colormode(255) # Modifie le mode de couleur de turtle
-    if heure > 20 or heure < 7: # Modifie les éléments en fonction de l'heure
+    astre(heure,tridi) # Dessine un astre
+    if heure > 20 or heure < 8: # Modifie les éléments en fonction de l'heure
         turtle.bgcolor("black") # Change la couleur de l'arrière plan en noir
         ciel_etoile() # Dessine les étoiles
     else:
         turtle.bgcolor("sky blue") # Change la couleur de l'arrière plan en bleu ciel
-        ciel_nuage([150,280],tridi) # Dessine des nuages dont l'ordonnée est comprise entre 150 et 280
-    astre(heure,tridi) # Dessine un astre
+    ciel_nuage([150,280],heure,tridi) # Dessine des nuages dont l'ordonnée est comprise entre 150 et 280
+    
 
 
 
 if __name__ == "__main__":
-    ciel(8)
+    ciel(4)
     turtle.exitonclick()

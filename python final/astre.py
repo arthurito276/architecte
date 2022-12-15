@@ -16,10 +16,10 @@ def astre(heure_force:int = None,tridi:float = None):
     x_astre = (800/12)*(heure-12) # Détermine l'abscisse de l'astre
     y_astre = -1*(heure-12)**2+250 # Détermine l'ordonnée de l'astre
     
-    if heure > 8 and heure < 20: # Choisit entre la Lune et le Soleil en fonction de l'heure.
-        pave(x_astre,y_astre,40,40,15,tridi,"gold") # Dessine un Soleil aux coordonnées x_astre et y_astre 40x40x15
+    if heure < 8 or heure > 20: # Choisit entre la Lune et le Soleil en fonction de l'heure.
+        pave(x_astre,y_astre,40,40,15,tridi,"light grey") # Dessine une Lune aux coordonnées x_astre et y_astre 40x40x15
     else:
-        pave(x_astre,y_astre,40,40,15,tridi,"grey") # Dessine une Lune aux coordonnées x_astre et y_astre 40x40x15
+        pave(x_astre,y_astre,40,40,15,tridi,"gold") # Dessine un Soleil aux coordonnées x_astre et y_astre 40x40x15
 
 if __name__ == "__main__":
     for heure in range(0,25):

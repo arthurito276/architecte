@@ -14,14 +14,14 @@ def pave(x:float,y:float,w:float,h:float,d:float,angle:float,c_remplissage=None)
         angle (float): Angle de fuite du pavé
         c_remplissage (optional): Couleur de remplissage du pavé. None par défaut.
     """
-    rectangle(x,y,w,h,c_remplissage)
-    if angle != None:
-        if angle < 180:
-            parallelogramme(x,y+h,w,d,angle,0,c_remplissage)
-        if angle > 90:
-            parallelogramme(x-w/2,y+h/2,h,d,angle,90,c_remplissage)
-        elif angle < 90:
-            parallelogramme(x+w/2,y+h/2,h,d,angle,90,c_remplissage)            
+    rectangle(x,y,w,h,c_remplissage) # Dessine le rectangle, première face du pavé
+    if angle != None: # Dessine les autres faces si l'angle est différent de None
+        if angle < 180: # Vérifie si la face du haut doit être tracée
+            parallelogramme(x,y+h,w,d,angle,0,c_remplissage) # Trace la face du haut
+        if angle > 90: # Vérifie si la face visible est celle de gauche 
+            parallelogramme(x-w/2,y+h/2,h,d,angle,90,c_remplissage) # Trace la face de gauche
+        elif angle < 90: # Vérifie si la face visible est celle de droite
+            parallelogramme(x+w/2,y+h/2,h,d,angle,90,c_remplissage) # Trace la face de droite   
 
 
 if __name__ == "__main__":
