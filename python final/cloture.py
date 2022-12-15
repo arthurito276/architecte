@@ -10,13 +10,12 @@ def cloture(x:float,y:float,w:float,tridi:float = None) -> None:
         w (float): Largeur de la cloture
         tridi (float, optional): Angle de fuite de la perspective cavalière. None par défaut.
     """
-    turtle.pencolor("peru")
-    pave(x,y+10,w,5,2,tridi,"peru")
-    pave(x,y+25,w,5,2,tridi,"peru")
-    nb_planche = w // 6
-    turtle.pencolor("black")
-    for x_planche in range(x-w//2,x+w//2+1,10):
-        pave(x_planche,y,5,35,2,tridi,"peru")
+    turtle.pencolor("peru") # Change la couleur du stylo
+    pave(x,y+10,w,5,2,tridi,"peru") # Dessine la première partie arrière de la cloture
+    pave(x,y+25,w,5,2,tridi,"peru") #Dessine la seconde partie arrière de la cloture
+    turtle.pencolor("black") # Change la couleur du stylo
+    for x_planche in range(x-w//2,x+w//2+1,10): #Boucle pour définir l'abscisse de chaque planche
+        pave(x_planche,y,5,35,2,tridi,"peru") # Dessine une planche
         
 
 

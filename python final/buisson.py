@@ -11,7 +11,7 @@ def buisson(x,ySol,w):
         w (float): Largeur du buisson
         tridi (float, optional): Angle de fuite de la perspective cavalière. None par défaut.
     """
-    pave(x,y,w,25,10,tridi,"forest green")
+    pave(x,y,w,25,10,tridi,"forest green") # Dessine le buisson aux coordonnées x,y de dimensions wx25x10
     
 if __name__ == "__main__":
     buisson(6,0,40,45)

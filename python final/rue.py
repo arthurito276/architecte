@@ -43,7 +43,7 @@ def main(tridi = None,heure_force = None):
     turtle.exitonclick()
 
 if __name__ == '__main__':
-    main(15,12)
+    main(15.1,12)
 
 
 
