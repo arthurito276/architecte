@@ -11,8 +11,13 @@ from ciel import ciel
 # ------------------------------
 # ------------------------------
 
-def main(tridi = None,heure_force = None):
+def rue(tridi = None,heure_force = None):
     turtle.setup(800, 600)
+    # Vérification de la validité des paramètres
+    if tridi > 180 or tridi < 0:
+        raise ValueError(f"L'angle ({tridi}) doit être compris entre 0 et 180 degrés")
+    if heure_force > 24 or heure_force < 0:
+        raise ValueError(f"L'heure ({heure_force}) doit être comprise entre 0 et 24")
     # On définit la hauteur du sol
     y_sol = -200
     # Dessin du ciel
@@ -46,7 +51,7 @@ def main(tridi = None,heure_force = None):
     turtle.exitonclick()
 
 if __name__ == '__main__':
-    main(15,4)
+    rue(189,4)
 
 
 
