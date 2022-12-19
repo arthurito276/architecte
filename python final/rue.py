@@ -36,7 +36,7 @@ def main(tridi = None,heure_force = None):
         if choix_element==0: # Vérifie si l'élement à dessiner doit être une cloture
             cloture(x_element,y_sol,48,tridi) # Dessine une cloture
         else: #Sinon c'est un buisson
-            buisson(x_element,y_sol,48) # Dessine un buisson
+            buisson(x_element,y_sol,48,tridi) # Dessine un buisson
         lampadaire(x_element,y_sol,tridi,heure_force) # Dessine un lampadaire
         if x_immeuble != None: # Vérifie qu'il faille dessiner un immeuble 
             immeuble(x_immeuble,y_sol,tridi,heure_force) # Dessine un immeuble
